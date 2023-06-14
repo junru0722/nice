@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>超級讚網頁</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        
+        .like-button {
+            padding: 20px 40px;
+            font-size: 24px;
+            border-radius: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .like-button:hover {
+            background-color: #45a049;
+        }
+        
+        .counter {
+            font-size: 36px;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        let likeCount = 0;
+
+        function like() {
+            likeCount++;
+            document.getElementById('like-counter').innerText = likeCount;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <button class="like-button" onclick="like()">讚</button>
+        <div class="counter" id="like-counter">0</div>
+    </div>
+</body>
+</html>
